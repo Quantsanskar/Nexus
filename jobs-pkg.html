@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Jobs - Packages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="jobs-pkg.css">
+</head>
+
+<body>
+    <div id="vanta-bg"></div> <!-- Container for Vanta.js background -->
+
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Nexus Jobs Logo" width="40" height="40">
+            <div>
+                <h1>Nexus Jobs</h1>
+                <p>Navigate Your Career</p>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="#recruiter-packages">Recruiters</a>
+            <a href="#employee-packages">Employees</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="actions">
+            <a class="loginButton" href="#login">Log in/Sign Up</a>
+        </div>
+    </header>
+    <main class="main">
+        <section id="recruiter-packages" class="packages">
+            <h2>Recruiter Packages</h2>
+            <div class="package free">
+                <h3>Free Plan</h3>
+                <p>For recruiters who want to get started without any cost.</p>
+                <ul>
+                    <li>View candidates</li>
+                    <li>Limited candidate information</li>
+                    <li>Post one job listing</li>
+                </ul>
+                <button class="signUpButton recruiterPackageButton" data-package="free">Sign Up for Free</button>
+            </div>
+            <div class="package paid">
+                <h3>Paid Plan</h3>
+                <p>For recruiters who need more features to find and connect with candidates.</p>
+                <ul>
+                    <li>Contact candidates</li>
+                    <li>Unlimited job postings</li>
+                    <li>Access to candidate details</li>
+                    <li>Priority support</li>
+                </ul>
+                <button class="signUpButton recruiterPackageButton" data-package="paid">Sign Up for Paid</button>
+            </div>
+        </section>
+
+        <section id="employee-packages" class="packages">
+            <h2>Employee Packages</h2>
+            <div class="package free">
+                <h3>Free Plan</h3>
+                <p>For job seekers who want to browse jobs and get started without any cost.</p>
+                <ul>
+                    <li>Browse available jobs</li>
+                    <li>View limited job details</li>
+                </ul>
+                <button class="signUpButton employeePackageButton" data-package="free">Sign Up for Free</button>
+            </div>
+            <div class="package paid">
+                <h3>Paid Plan</h3>
+                <p>For job seekers who want to apply to jobs and get personalized attention.</p>
+                <ul>
+                    <li>Apply to jobs</li>
+                    <li>Contact recruiters</li>
+                    <li>Receive personalized job recommendations</li>
+                    <li>Access to exclusive job listings</li>
+                </ul>
+                <button class="signUpButton employeePackageButton" data-package="paid">Sign Up for Paid</button>
+            </div>
+        </section>
+
+        <!-- Modal for Registration/Login -->
+        <div id="registrationModal" class="modal">
+            <div class="modalContent">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle">Sign Up</h2>
+                <form id="registrationForm">
+                    <div class="formGroup">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="formGroup">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="formActions">
+                        <button type="submit" class="submitButton">Submit</button>
+                    </div>
+                </form>
+                <p id="loginPrompt">Already have an account? <a href="#login" onclick="showLogin()">Login here</a>.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.23/vanta.net.min.js"></script>
+    <script src="jobs-pkg.js"></script>
+</body>
+
+</html>
