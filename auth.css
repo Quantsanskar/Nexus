@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #00CED1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    color: #FF1493;
+    margin-bottom: 20px;
+}
+
+.forms-container {
+    display: flex;
+    gap: 20px;
+}
+
+.form-wrapper {
+    flex: 1;
+    background-color: #F0F0F0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+button {
+    background-color: #FF1493;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.signin-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.signin-options button {
+    flex: 1;
+}
+
+.signin-options span {
+    font-weight: bold;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+a {
+    color: #FF1493;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .forms-container {
+        flex-direction: column;
+    }
+}

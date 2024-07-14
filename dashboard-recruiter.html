@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Jobs - Recruiter Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Nexus Jobs Logo" width="40" height="40">
+            <div>
+                <h1>Nexus Jobs</h1>
+                <p>Navigate Your Career</p>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="#profile">Profile</a>
+            <a href="#postjob">Post Job</a>
+            <a href="#candidates">Candidates</a>
+            <a href="#messages">Messages</a>
+            <a href="#" id="logout">Logout</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-main">
+        <h1>Recruiter Dashboard</h1>
+        <section id="profile" class="dashboard-section">
+            <h2>Company Profile</h2>
+            <div class="profile-info">
+                <img src="default-company-logo.png" alt="Company Logo" class="profile-picture">
+                <div class="profile-details">
+                    <h3 id="companyName">Tech Solutions Inc.</h3>
+                    <p id="recruiterEmail">recruiter@techsolutions.com</p>
+                    <p id="recruiterPlan">Premium Plan</p>
+                </div>
+            </div>
+            <button class="button">Edit Profile</button>
+        </section>
+
+        <section id="postjob" class="dashboard-section">
+            <h2>Post a New Job</h2>
+            <form id="postJobForm">
+                <input type="text" placeholder="Job Title" required>
+                <textarea placeholder="Job Description" required></textarea>
+                <input type="text" placeholder="Location" required>
+                <input type="text" placeholder="Salary Range" required>
+                <button type="submit" class="button">Post Job</button>
+            </form>
+        </section>
+
+        <section id="candidates" class="dashboard-section">
+            <h2>Available Candidates</h2>
+            <div class="candidate-list" id="candidateList">
+                <!-- Candidates will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="messages" class="dashboard-section">
+            <h2>Messages</h2>
+            <div class="message-list" id="messageList">
+                <!-- Messages will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nexus Jobs. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

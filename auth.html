@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Jobs - Sign In/Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SIGN UP & SIGN IN</h1>
+        <div class="forms-container">
+            <div class="form-wrapper signup">
+                <form id="signupForm">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <input type="email" placeholder="Email address" required>
+                    <div class="password-wrapper">
+                        <input type="password" placeholder="Password" required>
+                        <span class="toggle-password">👁️</span>
+                    </div>
+                    <label>
+                        <input type="checkbox" required>
+                        <span>I agree to the Terms of Service and Privacy Policy</span>
+                    </label>
+                    <button type="submit">CREATE ACCOUNT</button>
+                    <p>Already have an account? <a href="#" class="switch-form" data-form="signin">Sign in here</a></p>
+                </form>
+            </div>
+            <div class="form-wrapper signin">
+                <form id="signinForm">
+                    <input type="email" placeholder="Email address" required>
+                    <div class="password-wrapper">
+                        <input type="password" placeholder="Password" required>
+                        <span class="toggle-password">👁️</span>
+                    </div>
+                    <div class="signin-options">
+                        <button type="submit">SIGN UP</button>
+                        <span>OR</span>
+                        <button type="button" class="signin-btn">SIGN IN</button>
+                    </div>
+                    <label>
+                        <input type="checkbox">
+                        <span>Remember me</span>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

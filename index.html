@@ -30,8 +30,9 @@
                 <a href="#contact">Contact</a>
             </nav>
             <div class="actions">
-                <a class="loginButton" href="#">Log in/Sign Up</a>
-                <button class="postJobButton">Post A Job</button>
+                <a class="loginButton" href="auth.html">Log in/Sign Up</a>
+                <a class="postJobButton" href="packages.html">Post A Job</a>
+
             </div>
         </header>
 
@@ -40,51 +41,16 @@
                 <h2>4536+ Jobs listed</h2>
                 <h1>Find your Dream Job</h1>
                 <p>Navigate the digital landscape of opportunities</p>
-                <a class="uploadButton" href="jobs-pkg.html">Start your Journey</a>
+                <a class="uploadButton" href="packages.html">Start your Journey</a>
             </div>
         </main>
 
-        <div class="searchBar">
-            <input type="text" placeholder="Search keyword">
-            <input type="text" placeholder="Location">
-            <button class="findJobButton">Find Job</button>
-        </div>
+       
+       
 
-        <section class="featuredJobs">
-            <h2 class="section-title">Featured Jobs</h2>
-            <div class="jobGrid"></div>
-            <div class="buttonContainer">
-                <a class="loadMoreButton" href="#">Load More Jobs</a>
-            </div>
-        </section>
-    </div>
 
-    <div class="modalOverlay" id="applicationModal">
-        <div class="modal glass-effect">
-            <h2>Apply for <span id="jobTitle"></span></h2>
-            <form id="applicationForm">
-                <div class="formGroup">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="formGroup">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="formGroup">
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="formGroup">
-                    <label for="coverLetter">Cover Letter</label>
-                    <textarea id="coverLetter" name="coverLetter" rows="4"></textarea>
-                </div>
-                <div class="formActions">
-                    <button type="submit" class="submitButton">Submit Application</button>
-                    <button type="button" class="cancelButton" onclick="closeModal()">Cancel</button>
-                </div>
-            </form>
-        </div>
+        
+
     </div>
 
     <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
