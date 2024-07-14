@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus - Employee Dashboard</title>
+    <link rel="stylesheet" href="jobs.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.waves.min.js"></script>
+</head>
+
+<body>
+    <div id="vanta-bg"></div>
+    <header>
+        <div class="logo">Nexus</div>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="job-listing.html">JOBS</a>
+            <a href="#">PAGES</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        <button class="post-job-btn">Post A Job</button>
+    </header>
+
+    <main>
+        <h2>Job Listing</h2>
+        <div id="job-filters">
+            <button class="active">All</button>
+            <button>Full Time</button>
+            <button>Part Time</button>
+        </div>
+        <div id="job-list"></div>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script src="jobs.js"></script>
+    <script>
+        VANTA.WAVES({
+            el: "#vanta-bg",
+            color: 0x007bff,
+            shininess: 50,
+            waveHeight: 20,
+            waveSpeed: 1,
+            zoom: 0.85
+        });
+    </script>
+</body>
+
+</html>

@@ -1,52 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Jobs - Sign In/Sign Up</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="auth.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Signup Form</title>
+    <link rel="stylesheet" href="auth.css" />
 </head>
+
 <body>
-    <div class="container">
-        <h1>SIGN UP & SIGN IN</h1>
-        <div class="forms-container">
-            <div class="form-wrapper signup">
-                <form id="signupForm">
-                    <input type="text" placeholder="First Name" required>
-                    <input type="text" placeholder="Last Name" required>
-                    <input type="email" placeholder="Email address" required>
-                    <div class="password-wrapper">
-                        <input type="password" placeholder="Password" required>
-                        <span class="toggle-password">👁️</span>
-                    </div>
-                    <label>
-                        <input type="checkbox" required>
-                        <span>I agree to the Terms of Service and Privacy Policy</span>
-                    </label>
-                    <button type="submit">CREATE ACCOUNT</button>
-                    <p>Already have an account? <a href="#" class="switch-form" data-form="signin">Sign in here</a></p>
-                </form>
-            </div>
-            <div class="form-wrapper signin">
-                <form id="signinForm">
-                    <input type="email" placeholder="Email address" required>
-                    <div class="password-wrapper">
-                        <input type="password" placeholder="Password" required>
-                        <span class="toggle-password">👁️</span>
-                    </div>
-                    <div class="signin-options">
-                        <button type="submit">SIGN IN</button>
-                        
-                    </div>
-                    <label>
-                        <input type="checkbox">
-                        <span>Remember me</span>
-                    </label>
-                </form>
-            </div>
+    <a href="index.html" class="back-arrow">←</a>
+    <section class="wrapper">
+        <div class="form signup">
+            <header>Signup</header>
+            <form id="signupForm" action="#">
+                <input type="text" placeholder="Full name" required />
+                <input type="text" placeholder="Email address" required />
+                <input type="password" placeholder="Password" required />
+                <div class="checkbox">
+                    <input type="checkbox" id="signupCheck" />
+                    <label for="signupCheck">I accept all terms & conditions</label>
+                </div>
+                <input type="submit" value="Signup" />
+            </form>
         </div>
-    </div>
-    <script src="auth.js"></script>
+
+        <div class="form login">
+            <header>Login</header>
+            <form id="loginForm" action="#">
+                <input type="text" placeholder="Email address" required />
+                <input type="password" placeholder="Password" required />
+                <a href="#">Forgot password?</a>
+                <input type="submit" value="Login" />
+            </form>
+        </div>
+
+        <script>
+            const wrapper = document.querySelector(".wrapper"),
+                signupHeader = document.querySelector(".signup header"),
+                loginHeader = document.querySelector(".login header");
+
+            loginHeader.addEventListener("click", () => {
+                wrapper.classList.add("active");
+            });
+            signupHeader.addEventListener("click", () => {
+                wrapper.classList.remove("active");
+            });
+
+
+            document.getElementById('signupForm').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent form from submitting
+                window.location.href = 'jobs.html'; // Redirect to jobs.html
+                this.reset(); // Clear the form content
+            });
+
+            document.getElementById('loginForm').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent form from submitting
+                window.location.href = 'jobs.html'; // Redirect to jobs.html
+                this.reset(); // Clear the form content
+            });
+        </script>
+    </section>
 </body>
+
 </html>
