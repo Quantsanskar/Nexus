@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Jobs - Navigate Your Career</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+</head>
+
+<body>
+    <div id="vanta-bg">
+        <header class="header">
+            <div class="logo">
+                <img src="logo.png" alt="Nexus Jobs Logo" width="40" height="40">
+                <div>
+                    <h1>Nexus Jobs</h1>
+                    <p>Navigate Your Career</p>
+                </div>
+            </div>
+            <button class="hamburger" id="hamburger">☰</button>
+            <nav class="nav" id="nav">
+                <a href="#">Home</a>
+                <a href="joblistings.html">Browse Jobs</a>
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="actions">
+                <a class="loginButton" href="emplogin.html">Log in</a>
+                <button class="postJobButton">Post A Job</button>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="heroContent">
+                <h2>4536+ Jobs listed</h2>
+                <h1>Find your Dream Job</h1>
+                <p>Navigate the digital landscape of opportunities</p>
+                <a class="uploadButton" href="joblistings.html">Start your Journey</a>
+            </div>
+        </main>
+
+        <div class="searchBar">
+            <input type="text" placeholder="Search keyword">
+            <input type="text" placeholder="Location">
+            <button class="findJobButton">Find Job</button>
+        </div>
+
+        <section class="featuredJobs">
+            <h2 class="section-title">Featured Jobs</h2>
+            <div class="jobGrid"></div>
+            <div class="buttonContainer">
+                <a class="loadMoreButton" href="joblistings.html">Load More Jobs</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="modalOverlay" id="applicationModal">
+        <div class="modal glass-effect">
+            <h2>Apply for <span id="jobTitle"></span></h2>
+            <form id="applicationForm">
+                <div class="formGroup">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="formGroup">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="formGroup">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="formGroup">
+                    <label for="coverLetter">Cover Letter</label>
+                    <textarea id="coverLetter" name="coverLetter" rows="4"></textarea>
+                </div>
+                <div class="formActions">
+                    <button type="submit" class="submitButton">Submit Application</button>
+                    <button type="button" class="cancelButton" onclick="closeModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        VANTA.WAVES({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x4a90e2,
+            shininess: 40.00,
+            waveHeight: 15.00,
+            waveSpeed: 0.75,
+            zoom: 0.65
+        })
+    </script>
+</body>
+
+</html>

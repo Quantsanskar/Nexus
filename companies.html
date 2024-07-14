@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies - Global Job Portal</title>
+    <link rel="stylesheet" href="jobs.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Global Job Portal</h1>
+            </div>
+            <ul>
+                <li><a href="joblistings.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="companies.html">Companies</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="login-btn" onclick="window.location.href='emplogin.html'">Login</button>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Discover Leading Companies</h1>
+            <p>Find the best companies to work for</p>
+            <form class="search-form">
+                <input type="text" placeholder="Company name or industry">
+                <button type="submit">Search Companies</button>
+            </form>
+        </section>
+        <section class="company-listings" id="company-listings">
+            <!-- Company listings will be dynamically inserted here -->
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+    <script src="jobs.js"></script>
+</body>
+
+</html>
