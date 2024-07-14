@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const storedUser = JSON.parse(localStorage.getItem('user'));
         if (storedUser && storedUser.email === email && storedUser.password === password) {
             alert('Signed in successfully!');
+            window.location.href='empdash.html';
             signinForm.reset();
         } else {
             alert('Invalid email or password.');

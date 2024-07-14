@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="empdash.css">
+</head>
+<body>
+    <div id="bg-animation"></div>
+    <header>
+        <h1>Employee Dashboard</h1>
+        <nav>
+            <button id="jobsBtn" class="active">Jobs</button>
+            <button id="profilesBtn">Profiles</button>
+            <button id="myProfileBtn">My Profile</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="jobsSection" class="active">
+            <div class="filters">
+                <input type="text" id="searchInput" placeholder="Search jobs...">
+                <select id="locationFilter">
+                    <option value="">All Locations</option>
+                    <option value="New York">New York</option>
+                    <option value="San Francisco">San Francisco</option>
+                    <option value="London">London</option>
+                </select>
+                <select id="experienceFilter">
+                    <option value="">All Experience Levels</option>
+                    <option value="Entry">Entry Level</option>
+                    <option value="Mid">Mid Level</option>
+                    <option value="Senior">Senior Level</option>
+                </select>
+                <button id="applyFilters">Apply Filters</button>
+            </div>
+            <div id="jobListings"></div>
+        </section>
+
+        <section id="profilesSection">
+            <h2>Recruiters and Employees</h2>
+            <div id="profileList"></div>
+        </section>
+
+        <section id="myProfileSection">
+            <h2>My Profile</h2>
+            <div id="profileDetails">
+                <div class="profile-field">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName">
+                </div>
+                <div class="profile-field">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="profile-field">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone">
+                </div>
+                <div class="profile-field">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location">
+                </div>
+                <div class="profile-field">
+                    <label for="experience">Years of Experience:</label>
+                    <input type="number" id="experience">
+                </div>
+                <div class="profile-field">
+                    <label for="skills">Skills (comma-separated):</label>
+                    <input type="text" id="skills">
+                </div>
+                <div class="profile-field">
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" rows="4"></textarea>
+                </div>
+                <button id="saveProfile">Save Profile</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="applicationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Apply for <span id="jobTitle"></span></h2>
+            <form id="applicationForm">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="resume">Resume Link:</label>
+                <input type="url" id="resume" required>
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="profileModalContent"></div>
+        </div>
+    </div>
+
+    <script src="empdash.js"></script>
+</body>
+</html>
