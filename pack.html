@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,11 @@
     <link rel="stylesheet" href="pack.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    
     <div class="container">
+        <a href="/" class="back-button">&nbsp;← Back</a>
         <header>
             <h1>NEXUS JOBS</h1>
             <p>Navigate your career</p>
@@ -16,14 +20,25 @@
         <main>
             <h2>Secure your job<br>by choosing perfect plan</h2>
             <div class="buttons">
-                <button class="glow-button"><span class="icon">🎥</span> Get 16 lesson video</button>
+                <button class="glow-button" onclick="gotolessons()"><span class="icon">🎥</span> Get 16 lesson
+                    video</button>
                 <button class="glow-button"><span class="icon">📅</span> Daily Guidness Exercise</button>
-                <button class="glow-button"><span class="icon">👥</span> Access Upto 50K+ Companies</button>
+                <button class="glow-button" onclick="gotojobs()"><span class="icon">👥</span> Access Upto 50K+ Companies</button>
                 <button class="glow-button"><span class="icon">🧑‍🏫</span> Guidance by Experts</button>
             </div>
-            <button class="buy-now glow-button"><span class="icon">💰</span> Buy Now for just $5 <span class="strikethrough">$10</span></button>
+            <button class="buy-now glow-button"><span class="icon">💰</span> Buy Now for just $5 <span
+                    class="strikethrough">$10</span></button>
         </main>
     </div>
     <script src="pack.js"></script>
+    <script>
+        function gotolessons(){
+            window.location.href = "categories-lessons.html"
+        }
+        function gotojobs(){
+            window.location.href="jobs.html"
+        }
+    </script>
 </body>
+
 </html>
