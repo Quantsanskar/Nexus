@@ -22,11 +22,11 @@
             <div class="buttons">
                 <button class="glow-button" onclick="gotolessons()"><span class="icon">🎥</span> Get 16 lesson
                     video</button>
-                <button class="glow-button"><span class="icon">📅</span> Daily Guidness Exercise</button>
+                <button class="glow-button" onclick="gotoexer()"><span class="icon">📅</span> Daily Guidness Exercise</button>
                 <button class="glow-button" onclick="gotojobs()"><span class="icon">👥</span> Access Upto 50K+ Companies</button>
-                <button class="glow-button"><span class="icon">🧑‍🏫</span> Guidance by Experts</button>
+                <button class="glow-button" onclick="gotoexp()"><span class="icon">🧑‍🏫</span> Guidance by Experts</button>
             </div>
-            <button class="buy-now glow-button"><span class="icon">💰</span> Buy Now for just $5 <span
+            <button class="buy-now glow-button" onclick="gotosub()"><span class="icon">💰</span> Buy Now for just $5 <span
                     class="strikethrough">$10</span></button>
         </main>
     </div>
@@ -37,6 +37,15 @@
         }
         function gotojobs(){
             window.location.href="jobs.html"
+        }
+        function gotoexer(){
+            window.location.href="404.html"
+        }
+        function gotoexp(){
+            window.location.href="404.html"
+        }
+        function gotosub(){
+            window.location.href = "404.html"
         }
     </script>
 </body>
